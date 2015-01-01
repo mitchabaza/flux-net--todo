@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDo.Server", "ToDo.Server\ToDo.Server.csproj", "{BED748F8-4D2D-4D0A-8607-768A4D7092A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{607C95E5-C79A-4A0E-9B02-258AEAA33F02}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "ToDo.Client", "ToDo.Client\ToDo.Client.njsproj", "{2A6FAA5C-8301-4764-9DCE-1E6E71E12FB0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9BF2C9F2-6CB3-437B-A121-F56A33EF6C00}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.txt = ReadMe.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BED748F8-4D2D-4D0A-8607-768A4D7092A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BED748F8-4D2D-4D0A-8607-768A4D7092A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BED748F8-4D2D-4D0A-8607-768A4D7092A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BED748F8-4D2D-4D0A-8607-768A4D7092A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A6FAA5C-8301-4764-9DCE-1E6E71E12FB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A6FAA5C-8301-4764-9DCE-1E6E71E12FB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A6FAA5C-8301-4764-9DCE-1E6E71E12FB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A6FAA5C-8301-4764-9DCE-1E6E71E12FB0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

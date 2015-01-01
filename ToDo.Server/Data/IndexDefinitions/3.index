@@ -1,0 +1,30 @@
+{
+  "IndexId": 3,
+  "Name": "Auto/ToDoTasks/BydateAnddateCreatedSortBydatedateCreated",
+  "LockMode": "Unlock",
+  "Map": "from doc in docs.ToDoTasks\nselect new {\n\tdateCreated = doc.dateCreated,\n\tdate = doc.date\n}",
+  "Maps": [
+    "from doc in docs.ToDoTasks\nselect new {\n\tdateCreated = doc.dateCreated,\n\tdate = doc.date\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {
+    "dateCreated": "String",
+    "date": "String"
+  },
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": {},
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {
+    "dateCreated": "dateCreated",
+    "date": "date"
+  },
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Auto",
+  "DisableInMemoryIndexing": false
+}
