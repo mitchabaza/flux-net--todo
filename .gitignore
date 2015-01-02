@@ -18,8 +18,12 @@ build/
 bld/
 [Bb]in/
 [Oo]bj/
-Raven
 
+#Raven
+ToDo.Server/Raven
+ToDo.Server/Data
+
+ToDo.Server/App*/*.*
 # Roslyn cache directories
 *.ide/
 
