@@ -1,4 +1,4 @@
-﻿var SetIntervalMixin = {
+var SetIntervalMixin = {
   componentWillMount: function() {
     this.intervals = [];
   },
