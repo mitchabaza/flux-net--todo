@@ -88,7 +88,9 @@ namespace ReactJs.Controllers
         {
             using (var session = _store.OpenSession())
             {
-                session.Store(task);
+                var e = session.Load<ToDoTask>(task.Id);
+                e.completed = task.completed;
+                session.Store(e);
                 session.SaveChanges();
             }
             return Json(task, JsonRequestBehavior.AllowGet);

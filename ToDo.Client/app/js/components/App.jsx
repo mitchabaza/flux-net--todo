@@ -5,6 +5,7 @@ var ToDoInput = require("./Input.jsx")
 var ToDoList  = require("./List.jsx")
 var ToDoStore  = require("../Stores/ToDoStore")
 var _ = require('underscore');
+var Clock = require("./Clock.jsx");
 
 var ToDoApp = React.createClass({
 
@@ -14,7 +15,7 @@ var ToDoApp = React.createClass({
           
     } 
 	, 
-    componentDidMount: function() {
+     componentDidMount: function() {
         ToDoStore.addChangeListener(this._onChange);
     },
     componentWillUnmount: function() {
@@ -22,8 +23,11 @@ var ToDoApp = React.createClass({
     },
 
     render: function() {
-        return (
+        
+	 	 
+		return (
          <section id="main">
+				<Clock/>
                 <div id="header" >
                     <h1>todos</h1>
                 </div>

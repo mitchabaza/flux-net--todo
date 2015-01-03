@@ -32,7 +32,7 @@ var ToDoItem = React.createClass({
 		var datestring = Moment(dateNow).fromNow();
         return (<li key={this.props.todoitem.Id} className={clazz}>
             <div className="view"><input className="toggle" onChange={this.handleToggle} ref="complete"  type="checkbox" checked={complete}/>
-                 <label>{this.props.todoitem.text}<span className="when">Created {datestring}</span></label> 
+                 <label>{this.props.todoitem.text}<div className="when">Created {datestring}</div></label> 
                 <button onClick={this.handleRemove} className="destroy"></button>
             </div>
         </li>)

@@ -4,6 +4,12 @@ body {
     padding: 0;
 }
 
+#clock {
+    
+    position: absolute;
+    right: -200px;
+    font-size: 22px;
+}
 button {
     margin: 0;
     padding: 0;
@@ -245,7 +251,7 @@ label[for='toggle-all'] {
 
 .when {
     font-size: 14px;
-    float: right
+    font-style: italic;
 }
 #todo-list li label {
     white-space: pre;

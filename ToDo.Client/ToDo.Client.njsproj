@@ -41,6 +41,7 @@
     <Content Include="app\css\app.css" />
     <Content Include="app\img\bg.png" />
     <Content Include="app\js\components\App.jsx" />
+    <Content Include="app\js\components\Clock.jsx" />
     <Content Include="app\js\components\Footer.jsx" />
     <Content Include="app\js\components\Input.jsx" />
     <Content Include="app\js\components\Item.jsx" />
