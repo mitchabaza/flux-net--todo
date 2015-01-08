@@ -219,7 +219,7 @@ mixins: [SetIntervalMixin], // Use the mixin
 	return {seconds: 0};
  },
  componentDidMount: function() {
-    this.setInterval(this.tick, 100); // Call a method on the mixin
+    this.setInterval(this.tick, 1000); // Call a method on the mixin
   },
   tick: function() {
     this.setState({seconds: this.state.seconds + 1});
@@ -348,6 +348,7 @@ module.exports = ToDoInput ;
 
 var React = require("react")
 var Moment = require("moment")
+
 var Actions = require("../actions/actions.js")
 var ToDoItem = React.createClass({displayName: "ToDoItem",
 
@@ -373,12 +374,16 @@ var ToDoItem = React.createClass({displayName: "ToDoItem",
         var clazz = !complete?"":"completed"
 		var dateNow=Moment.utc(this.props.todoitem.date).toDate();
 		var datestring = Moment(dateNow).fromNow();
-        return (React.createElement("li", {key: this.props.todoitem.Id, className: clazz}, 
+        return (
+		React.createElement("li", {key: this.props.todoitem.Id, className: clazz}, 
             React.createElement("div", {className: "view"}, React.createElement("input", {className: "toggle", onChange: this.handleToggle, ref: "complete", type: "checkbox", checked: complete}), 
                  React.createElement("label", null, this.props.todoitem.text, React.createElement("div", {className: "when"}, "Created ", datestring)), 
                 React.createElement("button", {onClick: this.handleRemove, className: "destroy"})
             )
-        ))
+        )
+	 
+
+		)
 
 
     }
@@ -395,7 +400,6 @@ var ListFooter = require("./Footer.jsx")
 var _ = require("underscore")
 var SetIntervalMixin= require("./mixins/poller.jsx")
 
-
 var ToDoList = React.createClass({displayName: "ToDoList",
 
 mixins: [SetIntervalMixin], // Use the mixin
@@ -404,7 +408,7 @@ mixins: [SetIntervalMixin], // Use the mixin
 	return {seconds: 0};
  },
  componentDidMount: function() {
-    this.setInterval(this.tick, 10000); // Call a method on the mixin
+    this.setInterval(this.tick, 60000); // Call a method on the mixin
   },
   tick: function() {
     this.setState({seconds: this.state.seconds + 1});
@@ -436,14 +440,18 @@ mixins: [SetIntervalMixin], // Use the mixin
 
         return (React.createElement("div", null, 
                 React.createElement("ul", {id: "todo-list"}, 
-				
+				 
                 
 				filteredItems.map(function(item,index){
-
+				
+	
                     return (
-                        React.createElement(ToDoItem, {key: filteredItems[index].Id, todoitem: filteredItems[index]})
-                        )
+						
+							React.createElement(ToDoItem, {key: filteredItems[index].Id, todoitem: filteredItems[index]})
+                       	
+						)
                 })
+			 
 			    ), 
 
             React.createElement(ListFooter, {filter: this.props.filter, items: this.props.items})

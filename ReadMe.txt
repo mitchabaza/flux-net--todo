@@ -16,6 +16,7 @@ Select Task Runner Explorer
 Find the Task Runner Explorer Pane. 
 Expand tasks.  Double click on the "default" task.
 Confirm that this step executes without error.
+Point your browser to http://localhost/ReactJs/
 
 Notes
 ================================================

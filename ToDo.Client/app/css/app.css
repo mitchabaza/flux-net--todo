@@ -1,3 +1,22 @@
+
+.example-enter {
+  opacity: 0.01;
+  transition: opacity .5s ease-in;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+}
+
+.example-leave {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+}
+
 html,
 body {
     margin: 0;
@@ -174,7 +193,6 @@ label[for='toggle-all'] {
 }
 
 #toggle-all:before {
-    content:'\2713';
     font-size: 28px;
     color: #d9d9d9;
     padding: 0 25px 7px;
@@ -227,14 +245,12 @@ label[for='toggle-all'] {
     margin: auto 0;
     /* Mobile Safari */
     border: none;
-    -webkit-appearance: none;
     -ms-appearance: none;
     -o-appearance: none;
     appearance: none;
 }
 
 #todo-list li .toggle:after {
-    content:'\2713';
     /* 40 + a couple of pixels visual adjustment */
     line-height: 43px;
     font-size: 20px;
@@ -408,15 +424,13 @@ div.view > div {
     }
 
     #todo-list li .toggle {
-        height: 40px;
+        height: 21px;
     }
 
     #toggle-all {
         top: 35px;
-        left: -15px;
-        width: 65px;
-        height: 41px;
-        -webkit-appearance: none;
+        height: 21px;
+        
         appearance: none;
     }
 }

@@ -5,6 +5,7 @@
 
 var React = require("react")
 var Moment = require("moment")
+
 var Actions = require("../actions/actions.js")
 var ToDoItem = React.createClass({
 
@@ -30,12 +31,16 @@ var ToDoItem = React.createClass({
         var clazz = !complete?"":"completed"
 		var dateNow=Moment.utc(this.props.todoitem.date).toDate();
 		var datestring = Moment(dateNow).fromNow();
-        return (<li key={this.props.todoitem.Id} className={clazz}>
+        return (
+		<li key={this.props.todoitem.Id} className={clazz}>
             <div className="view"><input className="toggle" onChange={this.handleToggle} ref="complete"  type="checkbox" checked={complete}/>
                  <label>{this.props.todoitem.text}<div className="when">Created {datestring}</div></label> 
                 <button onClick={this.handleRemove} className="destroy"></button>
             </div>
-        </li>)
+        </li>
+	 
+
+		)
 
 
     }

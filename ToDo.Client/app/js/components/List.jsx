@@ -6,7 +6,6 @@ var ListFooter = require("./Footer.jsx")
 var _ = require("underscore")
 var SetIntervalMixin= require("./mixins/poller.jsx")
 
-
 var ToDoList = React.createClass({
 
 mixins: [SetIntervalMixin], // Use the mixin
@@ -15,7 +14,7 @@ mixins: [SetIntervalMixin], // Use the mixin
 	return {seconds: 0};
  },
  componentDidMount: function() {
-    this.setInterval(this.tick, 10000); // Call a method on the mixin
+    this.setInterval(this.tick, 60000); // Call a method on the mixin
   },
   tick: function() {
     this.setState({seconds: this.state.seconds + 1});
@@ -47,14 +46,18 @@ mixins: [SetIntervalMixin], // Use the mixin
 
         return (<div>
                 <ul id="todo-list">
-				
+				 
                 {
 				filteredItems.map(function(item,index){
-
+				
+	
                     return (
-                        <ToDoItem key={filteredItems[index].Id}  todoitem={filteredItems[index]}/>
-                        )
+						
+							<ToDoItem key={filteredItems[index].Id}  todoitem={filteredItems[index]}/>
+                       	
+						)
                 })}
+			 
 			    </ul>
 
             <ListFooter filter={this.props.filter} items={this.props.items} />
