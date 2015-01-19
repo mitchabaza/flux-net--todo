@@ -4,10 +4,10 @@ var React = require("react")
 var ToDoInput = require("./Input.jsx")
 var ToDoList  = require("./List.jsx")
 var ToDoStore  = require("../Stores/ToDoStore")
-var _ = require('underscore');
 var Clock = require("./Clock.jsx");
 
 var ToDoApp = React.createClass({
+
 
     getInitialState:function(){
 
@@ -21,7 +21,9 @@ var ToDoApp = React.createClass({
     componentWillUnmount: function() {
         ToDoStore.removeChangeListener(this._onChange);
     },
+	componentDidUpdate:function(){
 
+	},
     render: function() {
         
 	 	 

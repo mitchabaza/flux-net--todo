@@ -1,4 +1,5 @@
 Pre-Requisites
+
 ================================================
 Visual Studio 2013 Update 4
 NodeJS for Windows
@@ -17,6 +18,17 @@ Find the Task Runner Explorer Pane.
 Expand tasks.  Double click on the "default" task.
 Confirm that this step executes without error.
 Point your browser to http://localhost/ReactJs/
+
+
+Running the Tests
+================================================
+Install Python 2.7+
+Update PATH envrinoment variable to include Python path (i.e. C:\Python27)
+Create new System environment variable called GYP_MSVS_VERSION with value 2013
+Right click on ToDo.Client project
+Select Open Command Prommpt Here
+Type "npm test" and hit enter
+
 
 Notes
 ================================================

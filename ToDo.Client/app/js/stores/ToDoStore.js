@@ -3,7 +3,7 @@ var EventEmitter = require('events').EventEmitter;
 var Constants = require('../constants/ToDoConstants');
 var uuid = require('node-uuid');
 var _ = require('underscore');
-var api = require("../utils/API.js");
+var api = require("../utils/Factory.js");
 
 //private state
 var _data;
@@ -45,8 +45,6 @@ function addTask(item) {
 
     var newItem = getCreatedTask(item);
     _data.items.unshift(newItem);
-
-
     api.addTask(newItem);
 }
 

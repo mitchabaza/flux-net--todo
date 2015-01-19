@@ -35,11 +35,8 @@ var ToDoInput = React.createClass({
          return (
         <div>
 
-
                 <input type="checkbox" ref="toggleall"onChange={this.handleToggle} id="toggle-all"/>
                 <input id="new-todo" type="Text" ref="taskText" onKeyPress ={this.handleAdd}  placeholder="What needs to be done?"/>
-
-
 
         </div>);
     }

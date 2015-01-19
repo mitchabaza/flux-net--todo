@@ -36,7 +36,13 @@
     <Compile Include="app\js\constants\ToDoConstants.js" />
     <Compile Include="app\js\dispatcher\AppDispatcher.js" />
     <Compile Include="app\js\stores\ToDoStore.js" />
-    <Compile Include="app\js\utils\API.js" />
+    <Compile Include="app\js\utils\Factory.js" />
+    <Compile Include="app\js\utils\LocalStorage.js" />
+    <Compile Include="app\js\utils\RemoteStorage.js" />
+    <Compile Include="app\js\utils\sum.js" />
+    <Compile Include="app\js\__tests__\Input-tests.js" />
+    <Compile Include="app\js\__tests__\preProcessor.js" />
+    <Compile Include="app\js\__tests__\sum-tests.js" />
     <Compile Include="gulpfile.js" />
     <Content Include="app\css\app.css" />
     <Content Include="app\img\bg.png" />
@@ -62,6 +68,7 @@
     <Folder Include="app\js\stores\" />
     <Folder Include="app\js\utils\" />
     <Folder Include="app\" />
+    <Folder Include="app\js\__tests__\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
   <ProjectExtensions>
