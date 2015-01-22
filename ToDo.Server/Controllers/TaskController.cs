@@ -80,8 +80,8 @@ namespace ReactJs.Controllers
                 session.SaveChanges();
             }
 
-
-            return Json("", JsonRequestBehavior.AllowGet);
+            return RedirectToAction("Index");
+            
         }
 
         public ActionResult Update(ToDoTask task)
