@@ -41,7 +41,6 @@
     <Compile Include="app\js\utils\LocalStorage.js" />
     <Compile Include="app\js\utils\RemoteStorage.js" />
     <Compile Include="app\js\utils\sum.js" />
-    <Compile Include="app\js\__tests__\Input-tests.js" />
     <Compile Include="app\js\__tests__\preProcessor.js" />
     <Compile Include="app\js\__tests__\sum-tests.js" />
     <Compile Include="gulpfile.js" />

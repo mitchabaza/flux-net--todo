@@ -10,8 +10,8 @@ Task Runner Explorer (VS Extension)
 Running the Solution
 ================================================
 Right click on ToDo.Client project
-Open Node.js Interactive Window
-Type ".npm Install" and hit enter
+Select Open Command Prompt Here
+Type "npm Install --msvs_version=2013" and hit enter
 Right click on gulpfile.js (in the root of ToDo.Client)
 Select Task Runner Explorer
 Find the Task Runner Explorer Pane. 
