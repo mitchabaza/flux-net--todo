@@ -208,7 +208,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>56681</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/ReactJs</IISUrl>
+          <IISUrl>http://localhost/ToDo</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -219,7 +219,7 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>xcopy  "$(SolutionDir)\ToDo.Client\app" "$(SolutionDir)\ToDo.Server\app" /e /y</PostBuildEvent>
+    <PostBuildEvent>echo D|xcopy  "$(SolutionDir)ToDo.Client\app" "$(SolutionDir)ToDo.Server\app" /e /y</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

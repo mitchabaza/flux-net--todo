@@ -37,8 +37,6 @@
     <Compile Include="app\js\dispatcher\AppDispatcher.js" />
     <Compile Include="app\js\shims\console.js" />
     <Compile Include="app\js\stores\ToDoStore.js" />
-    <Compile Include="app\js\utils\Factory.js" />
-    <Compile Include="app\js\utils\LocalStorage.js" />
     <Compile Include="app\js\utils\RemoteStorage.js" />
     <Compile Include="app\js\utils\sum.js" />
     <Compile Include="app\js\__tests__\preProcessor.js" />

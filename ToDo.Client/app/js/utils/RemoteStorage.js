@@ -1,6 +1,6 @@
 var Actions = require('../actions/Actions');
 var $ = require('jquery');
-var _url = "/reactjs/task/";
+var _url = "/ToDo/task/";
 
 function buildUrl(action) {
 

@@ -3,7 +3,7 @@ var EventEmitter = require('events').EventEmitter;
 var Constants = require('../constants/ToDoConstants');
 var uuid = require('node-uuid');
 var _ = require('underscore');
-var api = require("../utils/Factory.js");
+var api = require('../utils/RemoteStorage');
 
 //private state
 var _data;

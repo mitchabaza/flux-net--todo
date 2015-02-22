@@ -1,5 +1,5 @@
 var ToDoApp = require('./components/app.jsx');
-var apiFactory = require("./utils/Factory");
+var apiFactory = require("./utils/RemoteStorage");
 var React = require('react');
 
 React.render(<ToDoApp/> ,document.getElementById('todoapp'));
