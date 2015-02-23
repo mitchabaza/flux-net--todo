@@ -22,7 +22,7 @@ bld/
 #Raven
 ToDo.Server/Raven
 ToDo.Server/Data
-
+ToDo.Server/Studio
 # Roslyn cache directories
 *.ide/
 

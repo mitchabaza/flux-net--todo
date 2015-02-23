@@ -14,16 +14,16 @@ Select Open Command Prompt Here
 Type "npm Install --msvs_version=2013" and hit enter
 Right click on gulpfile.js (in the root of ToDo.Client)
 Select Task Runner Explorer
-Find the Task Runner Explorer Pane. 
-Expand tasks.  Double click on the "default" task.-->Confirm that this step executes without error.
-Point your browser to http://localhost/ReactJs/
+Find the Task Runner Explorer Pane and Expand Tasks.
+Double click on the "default" task
+Confirm that this step executes without error.
+Point your browser to http://localhost/ToDo/
 
 
 Running the Tests
 ================================================
 Install Python 2.7+
 Update PATH envrinoment variable to include Python path (i.e. C:\Python27)
-Create new System environment variable called GYP_MSVS_VERSION with value 2013
 Open Node.js Interactive Window
 Type ".npm test" and hit enter
 

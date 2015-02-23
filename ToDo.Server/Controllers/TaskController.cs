@@ -1,54 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
-using Newtonsoft.Json;
 using Raven.Client;
+using Raven.Client.Linq;
 
 namespace ReactJs.Controllers
 {
     public class TaskController : Controller
     {
-        private readonly IDocumentStore _store;
-
         private static readonly Random Rnd = new Random();
-
-        private DateTime GetRandomDate(DateTime from, DateTime to)
-        {
-            var range = to - from;
-
-            var randTimeSpan = new TimeSpan((long) (Rnd.NextDouble()*range.Ticks));
-
-            return from + randTimeSpan;
-        }
-
-        private int GetRandomInt()
-        {
-            return Rnd.Next(0, 100);
-        }
-
-        public ActionResult Index()
-        {
-            //serve up the clientside application
-            return View();
-        }
+        private readonly IDocumentStore _store;
 
         public TaskController(IDocumentStore store)
         {
             _store = store;
         }
 
+        public ActionResult Index()
+        {
+            //serve up the client-side application
+            return View();
+        }
         #region API Actions
 
         public ActionResult Create(ToDoTask task)
         {
             task.dateCreated = DateTime.UtcNow;
             //
-            using (var session = _store.OpenSession())
+            using (IDocumentSession session = _store.OpenSession())
             {
                 session.Store(task);
                 session.SaveChanges();
@@ -58,21 +38,27 @@ namespace ReactJs.Controllers
 
         public ActionResult Seed()
         {
-            var tasks = new string[]
+            var tasks = new[]
             {
-                "Grocery Shopping", "Fill Prescriptions", "Finish Mortgage Application", "Pick Up Drycleaning",
+                "Grocery Shopping",
+                "Fill Prescriptions",
+                "Learn Flux",
+                "Finish Mortgage Application",
+                "Pick Up Drycleaning",
                 "Deposit Checks"
             };
-            using (var session = _store.OpenSession())
+            using (IDocumentSession session = _store.OpenSession())
             {
-                foreach (var taskText in tasks)
+                foreach (string taskText in tasks)
                 {
-                    DateTime date;
-                    date = GetRandomDate(GetRandomInt()%2 == 0 ? DateTime.UtcNow.AddHours(-24) : DateTime.UtcNow.AddDays(-35), DateTime.UtcNow);
+                    DateTime date = GenerateRandomDate(
+                        GenerateRandomInteger() %2 == 0 ? DateTime.UtcNow.AddHours(-24) : DateTime.UtcNow.AddDays(-35),
+                        DateTime.UtcNow);
                     var task = new ToDoTask
                     {
                         dateCreated = date,
-                        text = taskText
+                        text = taskText,
+                        completed = GenerateRandomInteger()%2 == 0
                     };
 
                     session.Store(task);
@@ -81,12 +67,11 @@ namespace ReactJs.Controllers
             }
 
             return RedirectToAction("Index");
-            
         }
 
         public ActionResult Update(ToDoTask task)
         {
-            using (var session = _store.OpenSession())
+            using (IDocumentSession session = _store.OpenSession())
             {
                 var e = session.Load<ToDoTask>(task.Id);
                 e.completed = task.completed;
@@ -98,9 +83,9 @@ namespace ReactJs.Controllers
 
         public ActionResult UpdateAll(List<ToDoTask> tasks)
         {
-            using (var session = _store.OpenSession())
+            using (IDocumentSession session = _store.OpenSession())
             {
-                foreach (var toDoTask in tasks)
+                foreach (ToDoTask toDoTask in tasks)
                 {
                     var e = session.Load<ToDoTask>(toDoTask.Id);
                     e.completed = toDoTask.completed;
@@ -118,7 +103,7 @@ namespace ReactJs.Controllers
                 return Json(new {success = true}, JsonRequestBehavior.AllowGet);
             }
             //
-            using (var session = _store.OpenSession())
+            using (IDocumentSession session = _store.OpenSession())
             {
                 var e = session.Load<ToDoTask>(task.Id);
                 session.Delete(e);
@@ -130,9 +115,9 @@ namespace ReactJs.Controllers
         public ActionResult List()
         {
             //
-            using (var session = _store.OpenSession())
+            using (IDocumentSession session = _store.OpenSession())
             {
-                var tasks = session.Query<ToDoTask>();
+                IRavenQueryable<ToDoTask> tasks = session.Query<ToDoTask>();
                 var payload = new {items = tasks.OrderByDescending(s => s.dateCreated).ToList()};
 
                 return Json(payload, JsonRequestBehavior.AllowGet);
@@ -140,5 +125,20 @@ namespace ReactJs.Controllers
         }
 
         #endregion
+
+        private DateTime GenerateRandomDate(DateTime from, DateTime to)
+        {
+            TimeSpan range = to - from;
+
+            var randTimeSpan = new TimeSpan((long) (Rnd.NextDouble()*range.Ticks));
+
+            return from + randTimeSpan;
+        }
+
+        private int GenerateRandomInteger()
+        {
+            return Rnd.Next(0, 100);
+        }
+
     }
 }
