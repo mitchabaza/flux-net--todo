@@ -6,9 +6,7 @@ var Actions = require("../Actions/Actions.js");
 var ListFooter = React.createClass({
 
 
-	handleClear:function(){
-	   Actions.clearCompleted();
-	},
+	 
 
 	handleFilter: function(e){
 	
@@ -19,19 +17,13 @@ var ListFooter = React.createClass({
     render: function() {
      
 	    var incomplete =_.filter(this.props.items, function(item){return item.completed==false?true:false});
-		var complete =_.filter(this.props.items, function(item){return item.completed!=false?true:false});
-
+		 
 
 		var buttonStyle = {
 			display: 'none'
 		};
 
-		if (complete.length>0){
-			buttonStyle	= {
-			display: 'block'
-		};
-
-		}
+		 
         return (
 		<footer id="footer"><span id="todo-count"><strong>{incomplete.length}</strong> {incomplete.length==1?"item":"items"} left</span>
 		<ul id="filters" ref="filters">
@@ -40,8 +32,7 @@ var ListFooter = React.createClass({
 			<li><a href='#/complete' className={this.props.filter=='complete'?'selected':''}  onClick={this.handleFilter}>Completed</a></li>
 		</ul>
 	 
-		<button style={buttonStyle}  onClick={this.handleClear} id="clear-completed">clear completed ({complete.length})</button>
-	 
+		 
 		</footer>
 		);
     }

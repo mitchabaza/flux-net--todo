@@ -11,12 +11,6 @@ var Actions = {
             data: data
         });
     },
-    clearCompleted: function() {
-        AppDispatcher.handleAction({
-            actionType: Constants.CLEAR_COMPLETED,
-            data: null
-        });
-    },
     setCompleted: function(data) {
         AppDispatcher.handleAction({
             actionType: Constants.TASK_COMPLETE,

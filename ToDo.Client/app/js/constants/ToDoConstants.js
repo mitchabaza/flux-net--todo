@@ -7,6 +7,5 @@ module.exports = keyMirror({
     TASK_COMPLETE: null,
     RECEIVE_DATA: null,
     SET_ALL_COMPLETE: null,
-    FILTER: null,
-    CLEAR_COMPLETED: null
+    FILTER: null
 });

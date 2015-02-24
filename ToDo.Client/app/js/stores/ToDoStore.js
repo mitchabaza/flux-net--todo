@@ -82,17 +82,6 @@ function setFilter(type) {
     _data.filter = type;
 
 }
-function clearCompleted() {
-
-    var deleted = _.filter(_data.items, function(item) {
-        return item.completed;
-    });
-
-    deleted.map(function(item) {
-
-        remove(item );
-    });
-}
 
 function remove(data) {
     var itemSelected = _.find(_data.items, function(item) {
