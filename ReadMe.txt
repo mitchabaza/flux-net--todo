@@ -9,13 +9,15 @@ Task Runner Explorer (VS Extension)
 
 Running the Solution
 ================================================
+Open IIS and ensure the ToDo.Server app is running under an Application Pool with administrator privileges 
 Right click on ToDo.Client project
 Select Open Command Prompt Here
 Type "npm Install --msvs_version=2013" and hit enter
+Type "npm Install gulp -g" and hit enter
 Right click on gulpfile.js (in the root of ToDo.Client)
 Select Task Runner Explorer
-Find the Task Runner Explorer Pane and Expand Tasks.
-Double click on the "default" task
+Find the Task Runner Explorer Pane and click the refresh button.
+Double click on the "build" task
 Confirm that this step executes without error.
 Point your browser to http://localhost/ToDo/
 
