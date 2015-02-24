@@ -15,7 +15,7 @@ var ToDoApp = React.createClass({
           
     } 
 	, 
-     componentDidMount: function() {
+    componentDidMount: function() {
         ToDoStore.addChangeListener(this._onChange);
     },
     componentWillUnmount: function() {

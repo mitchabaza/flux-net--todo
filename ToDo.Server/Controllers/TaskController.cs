@@ -51,9 +51,7 @@ namespace ReactJs.Controllers
             {
                 foreach (string taskText in tasks)
                 {
-                    DateTime date = GenerateRandomDate(
-                        GenerateRandomInteger() %2 == 0 ? DateTime.UtcNow.AddHours(-24) : DateTime.UtcNow.AddDays(-35),
-                        DateTime.UtcNow);
+                    DateTime date = GenerateRandomDate(StartDate(),DateTime.UtcNow);
                     var task = new ToDoTask
                     {
                         dateCreated = date,
@@ -67,6 +65,11 @@ namespace ReactJs.Controllers
             }
 
             return RedirectToAction("Index");
+        }
+
+        private DateTime StartDate()
+        {
+            return GenerateRandomInteger() %2 == 0 ? DateTime.UtcNow.AddHours(-24) : DateTime.UtcNow.AddDays(-35);
         }
 
         public ActionResult Update(ToDoTask task)
