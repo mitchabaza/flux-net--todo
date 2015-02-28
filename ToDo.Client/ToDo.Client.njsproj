@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app\js\actions\Actions.js" />
+    <Compile Include="app\js\actions\NewToDoActionCreator.js" />
     <Compile Include="app\js\app.js" />
     <Compile Include="app\js\constants\ToDoConstants.js" />
     <Compile Include="app\js\dispatcher\AppDispatcher.js" />
@@ -40,6 +41,7 @@
     <Compile Include="app\js\utils\RemoteStorage.js" />
     <Compile Include="app\js\utils\sum.js" />
     <Compile Include="app\js\__tests__\preProcessor.js" />
+    <Compile Include="app\js\__tests__\store-tests.js" />
     <Compile Include="app\js\__tests__\sum-tests.js" />
     <Compile Include="gulpfile.js" />
     <Content Include="app\css\app.css" />

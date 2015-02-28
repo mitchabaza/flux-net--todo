@@ -1,7 +1,6 @@
 var AppDispatcher = require('../dispatcher/AppDispatcher');
 var EventEmitter = require('events').EventEmitter;
 var Constants = require('../constants/ToDoConstants');
-var uuid = require('node-uuid');
 var _ = require('underscore');
 var api = require('../utils/RemoteStorage');
 
@@ -43,9 +42,9 @@ var ToDoStore = _.extend({}, EventEmitter.prototype, {
  
 function addTask(item) {
 
-    var newItem = getCreatedTask(item);
-    _data.items.unshift(newItem);
-    api.addTask(newItem);
+    
+    _data.items.unshift(item);
+  
 }
 
 function setComplete(data) {
@@ -66,16 +65,7 @@ function setAllComplete(data) {
     api.updateAll(_data.items);
 }
 
-function getCreatedTask(text) {
 
-    var newItem = {
-        Id: uuid.v1(),
-        text: text,
-        completed: false,
-        date: new Date().toISOString()
-    };
-    return newItem;
-}
 
 function setFilter(type) {
 

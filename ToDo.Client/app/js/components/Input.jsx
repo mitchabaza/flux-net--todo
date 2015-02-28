@@ -1,5 +1,6 @@
 var React = require("react")
-var Actions = require("../actions/actions.js")
+var CreateAction = require("../actions/NewToDoActionCreator.js")
+var Actions= require("../actions/actions.js")
 
 
 var ToDoInput = React.createClass({
@@ -13,7 +14,7 @@ var ToDoInput = React.createClass({
         if (this.refs.taskText.getDOMNode().value.trim()==""){
             return
         }
-       Actions.addToList(this.refs.taskText.getDOMNode().value);
+       CreateAction.fire(this.refs.taskText.getDOMNode().value);
        this.refs.taskText.getDOMNode().value = '';
        this.refs.toggleall.getDOMNode().checked = '';
 
