@@ -72,7 +72,7 @@ module.exports = {
         });
 
     },
-    getTasks: function() {
+    getAll: function() {
 
         $.ajax({
             type: 'POST',

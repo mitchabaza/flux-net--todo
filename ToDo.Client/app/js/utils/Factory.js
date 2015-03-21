@@ -22,8 +22,8 @@ module.exports = {
 
         GetStorage().delete(item);
     },
-    getTasks: function() {
-        GetStorage().getTasks();
+    getAll: function() {
+        GetStorage().getAll();
     }
 
 };

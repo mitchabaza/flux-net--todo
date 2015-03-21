@@ -5,11 +5,12 @@ var _ = require('underscore');
 var api = require('../utils/RemoteStorage');
 
 //private state
-var _data;
 var _filter = 'none';
- 
+var _data = { items: [], filter: _filter };
+
+
 function loadTasks(data) {
-    _data = {items:data.items, filter:_filter};
+    _data = { items: data.items, filter: _filter };
 
 }
 
@@ -18,7 +19,7 @@ var ToDoStore = _.extend({}, EventEmitter.prototype, {
     
 
    
-    getTasks: function() {
+    getAll: function() {
         return (_data);
     },
 
@@ -53,6 +54,7 @@ function setComplete(data) {
         return item.Id == data.Id;
     });
     itemSelected.completed = data.completed;
+
     api.updateItem(itemSelected);
 }
 

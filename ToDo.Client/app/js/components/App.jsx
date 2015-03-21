@@ -1,8 +1,7 @@
 
 
 var React = require("react")
-var ToDoInput = require("./Input.jsx")
-var ToDoList  = require("./List.jsx")
+ 
 var ToDoStore  = require("../Stores/ToDoStore")
 var Clock = require("./Clock.jsx");
 
@@ -10,13 +9,15 @@ var ToDoApp = React.createClass({
 
 
     getInitialState:function(){
-
-        return {  filter:'none', items:  []}
+		console.log("get")
+		 
+		return ToDoStore.getAll();
           
     } 
 	, 
     componentDidMount: function() {
         ToDoStore.addChangeListener(this._onChange);
+	 
     },
     componentWillUnmount: function() {
         ToDoStore.removeChangeListener(this._onChange);
@@ -28,20 +29,18 @@ var ToDoApp = React.createClass({
         
 	 	 
 		return (
-         <section id="main">
+         <section  id="main">
 				<Clock/>
                 <div id="header" >
                     <h1>todos</h1>
                 </div>
-                 <ToDoInput/>
-                <ToDoList filter={this.state.filter} items={this.state.items} />
-         </section>
+          </section>
 
         );
     }
     ,
     _onChange: function() {
-        this.setState(ToDoStore.getTasks());
+        this.setState(ToDoStore.getAll());
     }
 
 

@@ -4,4 +4,4 @@ var React = require('react');
 
 React.render(<ToDoApp/> ,document.getElementById('todoapp'));
 
-apiFactory.getTasks();
+apiFactory.getAll();

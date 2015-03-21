@@ -33,11 +33,14 @@ var ToDoInput = React.createClass({
     },
     render: function() {
 
+	var isDisabled=this.props.items.length==0;
          return (
         <div>
 
-                <input type="checkbox" ref="toggleall"onChange={this.handleToggle} id="toggle-all"/>
-                <input id="new-todo" type="Text" ref="taskText" onKeyPress ={this.handleAdd}  placeholder="What needs to be done?"/>
+                <input type="checkbox" disabled={isDisabled}
+				 ref="toggleall"onChange={this.handleToggle} id="toggle-all"/>
+               
+			    <input id="new-todo" type="Text" ref="taskText" onKeyPress ={this.handleAdd}  placeholder="What needs to be done?"/>
 
         </div>);
     }

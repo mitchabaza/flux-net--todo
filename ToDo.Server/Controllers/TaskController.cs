@@ -86,6 +86,11 @@ namespace ReactJs.Controllers
 
         public ActionResult UpdateAll(List<ToDoTask> tasks)
         {
+            if ((tasks) == null)
+            {
+                return Json(tasks, JsonRequestBehavior.AllowGet);
+                
+            }
             using (IDocumentSession session = _store.OpenSession())
             {
                 foreach (ToDoTask toDoTask in tasks)

@@ -40,9 +40,8 @@
     <Compile Include="app\js\stores\ToDoStore.js" />
     <Compile Include="app\js\utils\RemoteStorage.js" />
     <Compile Include="app\js\utils\sum.js" />
+    <Compile Include="app\js\__tests__\App-react-test.js" />
     <Compile Include="app\js\__tests__\preProcessor.js" />
-    <Compile Include="app\js\__tests__\store-tests.js" />
-    <Compile Include="app\js\__tests__\sum-tests.js" />
     <Compile Include="gulpfile.js" />
     <Content Include="app\css\app.css" />
     <Content Include="app\img\bg.png" />

@@ -10,6 +10,13 @@ var ToDoList = React.createClass({
 
 mixins: [SetIntervalMixin], // Use the mixin
  
+ propTypes:{
+	 filter: React.PropTypes.any.isRequired,
+	 items: React.PropTypes.array,
+	 
+
+ },
+
  getInitialState: function(){
 	return {seconds: 0};
  },
@@ -60,7 +67,7 @@ mixins: [SetIntervalMixin], // Use the mixin
 			 
 			    </ul>
 
-            <ListFooter filter={this.props.filter} items={this.props.items} />
+            <ListFooter {...this.props} />
            </div>);
     }
 
