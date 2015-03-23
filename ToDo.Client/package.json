@@ -11,7 +11,7 @@
     "test": "jest"
   },
   "jest": {
-    "scriptPreprocessor": "<rootDir>/app/js/__tests__/preprocessor.js",
+    "scriptPreprocessor": "<rootDir>/app/js/preprocessor.js",
     "unmockedModulePathPatterns": [
         "react",
         "underscore",

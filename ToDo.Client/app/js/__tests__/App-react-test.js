@@ -12,15 +12,14 @@ jest.dontMock("events");
      
      
     it('gets initial state from Store', function () {
-          var App = require("../components/App.jsx");
+         var App = require("../components/App.jsx");
         var React = require('react/addons');
         var TestUtils = React.addons.TestUtils;
-        //console.log("mock" + Store.getAll());
-
+       
         var output= TestUtils.renderIntoDocument(<App/>);
-        var comp = TestUtils.scryRenderedDOMComponentsWithTag(output,"section");
-//        console.log("output" + comp.getDOMNode().innerHTML);
-        console.log(comp.length);
+        var component = TestUtils.scryRenderedDOMComponentsWithTag(output, "section");
+        console.log(output.getDOMNode().innerHTML);
+        expect(component.length).toBe(1);
 
     });
     

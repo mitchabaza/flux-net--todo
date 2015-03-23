@@ -17,9 +17,9 @@ function loadTasks(data) {
 // Extend ProductStore with EventEmitter to add eventing capabilities
 var ToDoStore = _.extend({}, EventEmitter.prototype, {
     
-
    
-    getAll: function() {
+    getAll: function () {
+        console.log(_data)
         return (_data);
     },
 
