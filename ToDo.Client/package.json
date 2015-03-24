@@ -7,14 +7,19 @@
     "name": "mitch.abaza",
     "email": ""
   },
-  "scripts": {
-    "test": "jest"
-  },
+    "scripts": {
+        "test": "jest"
+    },
+
   "jest": {
-    "scriptPreprocessor": "<rootDir>/app/js/preprocessor.js",
+    "collectCoverage": true,
+      "scriptPreprocessor": "<rootDir>/app/js/preprocessor.js",
+    "setupTestFrameworkScriptFile": "<rootDir>/setup-jasmine-env.js",
     "unmockedModulePathPatterns": [
         "react",
         "underscore",
+        "path",
+        "fs",
         "uuid",
         "moment",
         "events"
@@ -23,6 +28,8 @@
   "devDependencies": {
     "browserify": "^7.0.3",
     "flux": "^2.0.1",
+    "istanbul": "^0.3.0",
+    "jasmine-reporters": "^1.0.0",
     "gulp": "^3.8.10",
     "gulp-browserify": "^0.5.0",
     "gulp-concat": "^2.4.2",

@@ -1,4 +1,4 @@
-var AppDispatcher = require('../dispatcher/AppDispatcher');
+var AppDispatcher = require('../dispatcher/AppDispatcher.js');
 var EventEmitter = require('events').EventEmitter;
 var Constants = require('../constants/ToDoConstants');
 var _ = require('underscore');
@@ -19,7 +19,6 @@ var ToDoStore = _.extend({}, EventEmitter.prototype, {
     
    
     getAll: function () {
-        console.log(_data)
         return (_data);
     },
 

@@ -36,6 +36,7 @@
     <Compile Include="app\js\app.js" />
     <Compile Include="app\js\constants\ToDoConstants.js" />
     <Compile Include="app\js\dispatcher\AppDispatcher.js" />
+    <Compile Include="setup-jasmine-env.js" />
     <Compile Include="app\js\shims\console.js" />
     <Compile Include="app\js\stores\ToDoStore.js" />
     <Compile Include="app\js\utils\RemoteStorage.js" />
@@ -65,6 +66,7 @@
     <Folder Include="app\js\constants\" />
     <Folder Include="app\js\dispatcher\" />
     <Folder Include="app\js\components\mixins\" />
+    <Folder Include="app\js\output\" />
     <Folder Include="app\js\shims\" />
     <Folder Include="app\js\stores\" />
     <Folder Include="app\js\utils\" />
