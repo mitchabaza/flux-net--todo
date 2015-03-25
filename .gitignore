@@ -187,3 +187,10 @@ UpgradeLog*.htm
 # Microsoft Fakes
 FakesAssemblies/
 /ToDo.Server/app
+ToDo.Client/app/js/output/TEST-Action.xml
+ToDo.Client/app/js/output/TEST-Store.xml
+ToDo.Client/coverage/clover.xml
+/ToDo.Client/coverage/coverage-final.json
+/ToDo.Client/coverage/lcov.info
+/ToDo.Client/coverage/lcov-report
+/ToDo.Client/coverage/clover.xml

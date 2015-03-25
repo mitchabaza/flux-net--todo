@@ -1,8 +1,7 @@
 ﻿var AppDispatcher = require('../dispatcher/AppDispatcher');
 var ActionTypes = require('../constants/ToDoConstants');
 var Service = require('../utils/RemoteStorage');
-var uuid = require('node-uuid');
-
+var uuid = require('node-uuid'); 
 //private
 function createTask(text) {
     
