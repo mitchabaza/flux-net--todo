@@ -1,7 +1,8 @@
 
 
 var React = require("react")
- 
+var ToDoInput = require("./Input.jsx")
+var ToDoList  = require("./List.jsx")
 var ToDoStore  = require("../Stores/ToDoStore")
 var Clock = require("./Clock.jsx");
 
@@ -33,7 +34,10 @@ var ToDoApp = React.createClass({
 				<Clock/>
                 <div id="header" >
                     <h1>todos</h1>
+					
                 </div>
+				 <ToDoInput filter={this.state.filter} items={this.state.items}/>
+                <ToDoList filter={this.state.filter} items={this.state.items} />
           </section>
 
         );
