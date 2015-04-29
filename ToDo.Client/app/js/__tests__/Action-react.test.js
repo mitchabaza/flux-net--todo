@@ -1,6 +1,6 @@
 ﻿jest.dontMock("../actions/NewToDoActionCreator.js");
 
-describe('Action', function () {
+describe('ToDoActionCreator', function () {
     
     
     var AppDispatcher;
@@ -13,12 +13,11 @@ describe('Action', function () {
     it('calls dispatcher when fired', function () {
         expect(AppDispatcher.handleAction.mock.calls.length).toBe(0);
         var action = require("../actions/NewToDoActionCreator.js");
-        action.fire("take a dump");
+        action.fire("go grocery shopping");
         expect(AppDispatcher.handleAction.mock.calls.length).toBe(1);
 
     });
-    it('creates new todo item with correct states', function () {
-
+    it('creates new todo item with correct state', function () {
         
         var text = "fire dan";
         expect(AppDispatcher.handleAction.mock.calls.length).toBe(0);

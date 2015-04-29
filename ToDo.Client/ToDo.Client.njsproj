@@ -36,6 +36,7 @@
     <Compile Include="app\js\app.js" />
     <Compile Include="app\js\constants\ToDoConstants.js" />
     <Compile Include="app\js\dispatcher\AppDispatcher.js" />
+    <Compile Include="app\js\ImportantModule.js" />
     <Compile Include="app\js\utils\Date.js" />
     <Compile Include="app\js\__tests__\Action-react.test.js" />
     <Compile Include="setup-jasmine-env.js" />
