@@ -1,10 +1,36 @@
 ﻿jest.dontMock("../actions/NewToDoActionCreator.js");
+jest.dontMock("../actions/FilterItemsActionCreator.js");
 
+
+
+describe('FilterActionCreator', function () {
+    
+    
+    var AppDispatcher;
+    
+    
+    beforeEach(function () {
+        AppDispatcher = require('../dispatcher/AppDispatcher.js');
+    });
+    
+    it('calls dispatcher when fired', function () {
+        expect(AppDispatcher.handleAction.mock.calls.length).toBe(0);
+        var action = require("../actions/FilterItemsActionCreator.js");
+        action.fire("none");
+        expect(AppDispatcher.handleAction.mock.calls.length).toBe(1);
+
+    });
+    
+    
+    
+    
+ 
+});
 describe('ToDoActionCreator', function () {
     
     
     var AppDispatcher;
-    var Callback;
+   
     
     beforeEach(function () {
         AppDispatcher = require('../dispatcher/AppDispatcher.js');
@@ -17,6 +43,7 @@ describe('ToDoActionCreator', function () {
         expect(AppDispatcher.handleAction.mock.calls.length).toBe(1);
 
     });
+
     it('creates new todo item with correct state', function () {
         
         var text = "fire dan";

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="ToDoActionCreator" errors="0" tests="2" failures="0" time="1.335" timestamp="2015-05-01T21:04:21">
+  <testcase classname="ToDoActionCreator" name="calls dispatcher when fired" time="1.3"></testcase>
+  <testcase classname="ToDoActionCreator" name="creates new todo item with correct state" time="0.02"></testcase>
+</testsuite>
+</testsuites>

@@ -36,14 +36,12 @@
     <Compile Include="app\js\app.js" />
     <Compile Include="app\js\constants\ToDoConstants.js" />
     <Compile Include="app\js\dispatcher\AppDispatcher.js" />
-    <Compile Include="app\js\ImportantModule.js" />
     <Compile Include="app\js\utils\Date.js" />
     <Compile Include="app\js\__tests__\Action-react.test.js" />
     <Compile Include="setup-jasmine-env.js" />
     <Compile Include="app\js\shims\console.js" />
     <Compile Include="app\js\stores\ToDoStore.js" />
     <Compile Include="app\js\utils\RemoteStorage.js" />
-    <Compile Include="app\js\utils\sum.js" />
     <Compile Include="app\js\preProcessor.js" />
     <Compile Include="app\js\__tests__\Store-react-test.js" />
     <Compile Include="gulpfile.js" />

@@ -41,13 +41,6 @@ var Actions = {
             actionType: Constants.TASK_ADD,
             data: item
         });
-    },
-    filter: function(type) {
-        AppDispatcher.handleAction({
-            actionType: Constants.FILTER,
-            data: type
-        });
-
     }
 };
 module.exports = Actions;

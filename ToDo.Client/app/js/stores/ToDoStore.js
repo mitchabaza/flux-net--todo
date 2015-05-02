@@ -12,6 +12,7 @@ var _data = { items: [], filter: _filter };
 function loadTasks(data) {
     _data = { items: data.items, filter: _filter };
 
+
 }
 
 // Extend ProductStore with EventEmitter to add eventing capabilities

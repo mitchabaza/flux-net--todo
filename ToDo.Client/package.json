@@ -22,7 +22,8 @@
         "fs",
         "uuid",
         "moment",
-        "events"
+        "events",
+        "Test-Helper"
     ]
   },
   "devDependencies": {
