@@ -20,7 +20,7 @@
     <OutputPath>.</OutputPath>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
-    <ProjectView>ProjectFiles</ProjectView>
+    <ProjectView>ShowAllFiles</ProjectView>
     <NodejsPort>1337</NodejsPort>
     <StartWebBrowser>true</StartWebBrowser>
   </PropertyGroup>
@@ -32,12 +32,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app\js\actions\Actions.js" />
+    <Compile Include="app\js\actions\FilterItemsActionCreator.js" />
     <Compile Include="app\js\actions\NewToDoActionCreator.js" />
     <Compile Include="app\js\app.js" />
     <Compile Include="app\js\constants\ToDoConstants.js" />
     <Compile Include="app\js\dispatcher\AppDispatcher.js" />
     <Compile Include="app\js\utils\Date.js" />
     <Compile Include="app\js\__tests__\Action-react.test.js" />
+    <Compile Include="app\js\__tests__\Test-Helper-Data.js" />
     <Compile Include="setup-jasmine-env.js" />
     <Compile Include="app\js\shims\console.js" />
     <Compile Include="app\js\stores\ToDoStore.js" />
