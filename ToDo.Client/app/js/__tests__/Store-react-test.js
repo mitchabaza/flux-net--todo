@@ -8,10 +8,13 @@ describe('Store', function () {
     var AppDispatcher;
     var Store;
     var storeCallback;
-    var Constants = require("../constants/ToDoConstants.js");
-
+    var Constants;
+    var lodash;
     beforeEach(function () {
+        
+        Constants = require("../constants/ToDoConstants.js");
         Store = require('../stores/ToDoStore.js');
+        lodash = require("lodash");
         AppDispatcher = require('../dispatcher/AppDispatcher.js');
         storeCallback = AppDispatcher.register.mock.calls[0][0];
      });
@@ -31,14 +34,19 @@ describe('Store', function () {
 
     it('filters items using correct criteria', function () {
 
-        var test= require("./Test-Helper-Data.js");
+        var testHelper= require("./Test-Helper-Data.js");
+        
+        //arrange
+        var testData = test.createTasks(5);
+        testData.first
         var payload = {
            
             action: {
                 actionType: Constants.RECEIVE_DATA,
-                data: {items: test.createTasks(5)}
+                data: {items: testData}
             }
         };
+
         storeCallback(payload);
         var tasks = Store.getAll();
         expect(tasks).toBeDefined();
