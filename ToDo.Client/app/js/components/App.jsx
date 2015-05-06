@@ -1,13 +1,10 @@
 
 
 var React = require("react")
-var Important= require("../Module.js")
 var ToDoInput = require("./Input.jsx")
 var ToDoList  = require("./List.jsx")
 var ToDoStore  = require("../Stores/ToDoStore")
-var Clock = require("./Clock.jsx");
-var Important1 = new Important(200);
-var Important2 = new Important(5000);
+
 var ToDoApp = React.createClass({
 
 
@@ -33,7 +30,7 @@ var ToDoApp = React.createClass({
 	 	 
 		return (
          <section  id="main">
-		 		<Clock/>
+		 	 
                 <div id="header" >
                     <h1>todos</h1>
 				
@@ -47,8 +44,7 @@ var ToDoApp = React.createClass({
     }
     ,
     _onChange: function() {
-		Important1.add(1);
-        Important2.add(1);        
+		   
 		this.setState(ToDoStore.getAll());
     }
 

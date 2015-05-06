@@ -157,7 +157,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="AutoFac.cs" />
+    <Compile Include="App_Start\AutoFacConfig.cs" />
     <Compile Include="Controllers\TaskController.cs" />
     <Compile Include="ToDoTask.cs" />
     <Compile Include="Global.asax.cs">

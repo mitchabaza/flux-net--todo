@@ -5,12 +5,12 @@ var _ = require('underscore');
 var api = require('../utils/RemoteStorage');
 
 //private state
-var _filter = 'none';
-var _data = { items: [], filter: _filter };
+
+var _data = { items: [] };
 
 
 function loadTasks(data) {
-    _data = { items: data.items, filter: _filter };
+    _data = { items: data.items };
 
 
 }
@@ -69,11 +69,7 @@ function setAllComplete(data) {
 
 
 
-function setFilter(type) {
-
-    _data.filter = type;
-
-}
+ 
 function clearCompleted() {
 
     var deleted = _.filter(_data.items, function(item) {
@@ -117,9 +113,7 @@ AppDispatcher.register(function(payload) {
     case Constants.TASK_COMPLETE:
         setComplete(action.data);
         break;
-    case Constants.FILTER:
-        setFilter(action.data);
-        break;
+    
     case Constants.CLEAR_COMPLETED:
         clearCompleted();
         break;

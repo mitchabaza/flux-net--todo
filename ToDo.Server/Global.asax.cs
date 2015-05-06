@@ -19,7 +19,7 @@ namespace ReactJs
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-            AutoFac.Init();
+            AutoFacConfig.Init();
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

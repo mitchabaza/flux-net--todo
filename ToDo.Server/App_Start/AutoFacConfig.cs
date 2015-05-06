@@ -11,7 +11,7 @@ using ReactJs.Controllers;
 
 namespace ReactJs
 {
-    public class AutoFac
+    public class AutoFacConfig
     {
         public static void Init()
         {
@@ -28,7 +28,7 @@ namespace ReactJs
                     Configuration = new RavenConfiguration()
                     {
                         DatabaseName = "ToDo",
-                        Port = 1234
+                        Port = 9876
                     }
                 };
                 NonAdminHttp.EnsureCanListenToWhenInNonAdminContext(1234);
