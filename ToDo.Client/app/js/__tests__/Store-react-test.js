@@ -32,14 +32,13 @@ describe('Store', function () {
         expect(AppDispatcher.register.mock.calls.length).toBe(1);
     });
 
-    it('filters items using correct criteria', function () {
+    it('load items from server', function () {
 
         var testHelper= require("./Test-Helper-Data.js");
         
         //arrange
-        var testData = test.createTasks(5);
-        testData.first
-        var payload = {
+        var testData = testHelper.createTasks(5);
+         var payload = {
            
             action: {
                 actionType: Constants.RECEIVE_DATA,
@@ -51,10 +50,7 @@ describe('Store', function () {
         var tasks = Store.getAll();
         expect(tasks).toBeDefined();
         expect(tasks.items.length).toEqual(5);
-
+         
     });
     
-   
-    
- 
 });
