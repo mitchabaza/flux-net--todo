@@ -7,41 +7,41 @@
     "name": "mitch.abaza",
     "email": ""
   },
-    "scripts": {
-        "test": "jest"
-    },
-
+  "scripts": {
+    "test": "jest"
+  },
   "jest": {
     "collectCoverage": true,
-      "scriptPreprocessor": "<rootDir>/app/js/preprocessor.js",
+    "scriptPreprocessor": "<rootDir>/app/js/preprocessor.js",
     "setupTestFrameworkScriptFile": "<rootDir>/setup-jasmine-env.js",
     "unmockedModulePathPatterns": [
-        "react",
-        "underscore",
-        "path",
-        "fs",
-        "uuid",
-        "moment",
-        "events",
-        "Test-Helper"
+      "react",
+      "underscore",
+      "path",
+      "fs",
+      "uuid",
+      "moment",
+      "events",
+      "Test-Helper"
     ]
   },
   "devDependencies": {
     "browserify": "^7.0.3",
+    "colors": "^1.1.2",
     "flux": "^2.0.1",
-    "istanbul": "^0.3.0",
-    "jasmine-reporters": "^1.0.0",
     "gulp": "^3.8.10",
     "gulp-browserify": "^0.5.0",
+    "gulp-buffer": "0.0.2",
     "gulp-concat": "^2.4.2",
     "gulp-uglify": "^1.1.0",
+    "istanbul": "^0.3.0",
+    "jasmine-reporters": "^1.0.0",
+    "jest-cli": "0.4.0",
     "jquery": "^2.1.3",
     "moment": "2.9.0",
     "node-uuid": "^1.4.2",
     "react": "^0.12.2",
     "react-tools": "^0.12.2",
-    "flux": "^2.0.1",
-    "jest-cli":"0.4.0",
     "reactify": "^0.17.1",
     "underscore": "^1.7.0",
     "vinyl-buffer": "^1.0.0",

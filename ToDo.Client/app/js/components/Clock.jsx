@@ -2,12 +2,9 @@
 
 var React = require("react")
 var Moment = require("Moment")
-var SetIntervalMixin= require("./mixins/poller.jsx")
-
-var Clock= React.createClass({
-
-mixins: [SetIntervalMixin], // Use the mixin
  
+var Clock= React.createClass({
+  
  getInitialState: function(){
 	return {seconds: 0};
  },

@@ -34,7 +34,7 @@
     <Compile Include="app\js\actions\Actions.js" />
     <Compile Include="app\js\actions\FilterItemsActionCreator.js" />
     <Compile Include="app\js\actions\NewToDoActionCreator.js" />
-    <Compile Include="app\js\app.js" />
+    <Compile Include="app\js\bootstrap.js" />
     <Compile Include="app\js\constants\ToDoConstants.js" />
     <Compile Include="app\js\dispatcher\AppDispatcher.js" />
     <Compile Include="app\js\utils\Date.js" />
@@ -55,7 +55,6 @@
     <Content Include="app\js\components\Input.jsx" />
     <Content Include="app\js\components\Item.jsx" />
     <Content Include="app\js\components\List.jsx" />
-    <Content Include="app\js\components\mixins\Poller.jsx" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>

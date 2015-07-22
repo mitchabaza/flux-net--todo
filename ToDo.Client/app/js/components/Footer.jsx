@@ -2,18 +2,18 @@
 var React = require("react")
 var _ = require('underscore');
 var Actions = require("../Actions/Actions.js"); 
-
+var FilterAction = require("../Actions/FilterItemsActionCreator.js"); 
 var ListFooter = React.createClass({
 
 
 	handleClear:function(){
-	   Actions.clearCompleted();
+	  alert("implement me!")
 	},
 
 	handleFilter: function(e){
 	
 		filter=e.target.getAttribute('href').replace('#/','');
-		Actions.filter(filter)
+		FilterAction.fire(filter)
 	 
 	},
     render: function() {

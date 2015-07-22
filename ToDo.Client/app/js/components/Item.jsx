@@ -11,7 +11,7 @@ var ToDoItem = React.createClass({
 
 
     handleRemove:function(e){
-        Actions.remove({Id:this.props.todoitem.Id})
+       alert("implement me!")
     },
     handleToggle:function () {
 
@@ -29,12 +29,11 @@ var ToDoItem = React.createClass({
     render: function () {
         var complete = !this.props.todoitem.completed?false:true;
         var clazz = !complete?"":"completed"
-		var dateNow=Moment.utc(this.props.todoitem.date).toDate();
-		var datestring = Moment(dateNow).fromNow();
+		 
         return (
 		<li key={this.props.todoitem.Id} className={clazz}>
             <div className="view"><input className="toggle" onChange={this.handleToggle} ref="complete"  type="checkbox" checked={complete}/>
-                 <label>{this.props.todoitem.text}<div className="when">Created {datestring}</div></label> 
+                 <label>{this.props.todoitem.text} </label> 
                 <button onClick={this.handleRemove} className="destroy"></button>
             </div>
         </li>

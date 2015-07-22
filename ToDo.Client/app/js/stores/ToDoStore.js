@@ -74,26 +74,8 @@ function setFilter(type) {
     _data.filter = type;
 
 }
-function clearCompleted() {
+ 
 
-    var deleted = _.filter(_data.items, function(item) {
-        return item.completed;
-    });
-
-    deleted.map(function(item) {
-
-        remove(item );
-    });
-}
-
-function remove(data) {
-    var itemSelected = _.find(_data.items, function(item) {
-        return item.Id == data.Id;
-    });
-    var index = _data.items.indexOf(itemSelected);
-    _data.items.splice(index, 1);
-    api.delete(itemSelected);
-}
 
 AppDispatcher.register(function(payload) {
     var action = payload.action;
@@ -120,9 +102,7 @@ AppDispatcher.register(function(payload) {
     case Constants.FILTER:
         setFilter(action.data);
         break;
-    case Constants.CLEAR_COMPLETED:
-        clearCompleted();
-        break;
+   
     default:
         return true;
     }

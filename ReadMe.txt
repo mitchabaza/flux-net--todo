@@ -11,7 +11,7 @@ Running the Solution
 ================================================
 Open IIS and ensure the ToDo.Server app is running under an Application Pool with administrator privileges 
 Right click on ToDo.Client project
-Select Open Command Prompt Here
+Select "Open Command Prompt Here"
 Type "npm install --msvs-version=2013 --python=python2.7" and hit enter
 Type "npm install gulp -g" and hit enter
 Right click on gulpfile.js (in the root of ToDo.Client)
